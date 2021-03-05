@@ -1,7 +1,7 @@
 :root {
-  --green: #A2CCB6;
-  --yellow: #FCEEB5;
-  --peach: #EE786E;
+  --green: #9ea9e9;
+  --yellow: #cccccc;
+  --peach: #0c0d5a;
 }
 * {
   box-sizing: border-box;
@@ -9,11 +9,12 @@
 html {
   font-family: 'Single Day', cursive;
   line-height: 1.5;
-  background-image: url(../dist/img/bg.jpg);
+  /* background-image: url(../ustudio_team/img/bg.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: center; */
   color: var(--peach);
   overflow-y: scroll;
+  overflow-x: hidden;
   min-height: 100%;
 }
 body {
@@ -22,9 +23,20 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image: url(../dist/img/bg.jpg);
+  /* background-image: url(../ustudio_team/img/bg.jpg);
+  background-size: cover;
+  background-position: center; */
+}
+.bg-area {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-image: url(../ustudio_team/img/bg.jpg);
   background-size: cover;
   background-position: center;
+  z-index: -1000;
 }
 
 p {
@@ -142,13 +154,13 @@ button[type="submit"]:focus:before {
 textarea:focus {
   outline: none; 
   box-shadow: inset 0 0 0 3px currentcolor, inset 3px 3px 0 4px var(--yellow), 3px 3px 0 #f7c49c, 4px 4px 0 #f7c49c;
-  background: #f7c49c;
+  background: #9ea9e9;
   color: var(--peach);
 }
 
 .members textarea:focus {
   box-shadow: inset 0 0 0 3px currentcolor, inset 3px 3px 0 4px var(--yellow), 3px 3px 0 #e1e4b6, 4px 4px 0 #e1e4b6;
-  background: #e1e4b6;
+  background: #cccccc;
   color: var(--green);
 }
 

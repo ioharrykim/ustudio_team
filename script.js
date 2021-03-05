@@ -54,7 +54,7 @@ let addCopyListener = function() {
       document.execCommand('copy');
       selection.removeAllRanges();
       const original = copyButton.textContent;
-      copyButton.textContent = 'copied!'; 
+      copyButton.textContent = '복사됨!'; 
       setTimeout(() => {
         copyButton.textContent = original;
       }, 1000);
@@ -92,107 +92,107 @@ form.addEventListener( "submit", function( event ) {
 });
 
 
-// Credits Bouncing random balls by Roberto Pérez https://codepen.io/todomagichere/pen/BqeMvd Thank you!
+// BALL!
 
 //Gravity
-(function() {
-  var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-                              window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-  window.requestAnimationFrame = requestAnimationFrame;
-})();
+// (function() {
+//   var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+//                               window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+//   window.requestAnimationFrame = requestAnimationFrame;
+// })();
 
-let canvas = document.createElement('canvas');
-canvas.id = 'screen';
-document.body.appendChild(canvas);
-canvas.width = 2*window.innerWidth;
-canvas.height = 2*window.innerHeight;
-canvas.style.width = "100vw";
-canvas.style.height = "100vh";
-var screenWidth = canvas.width/2;
-var screenHeight = canvas.height/2;
-var ctx = canvas.getContext("2d");
-ctx.scale(2,2);
-var fps = 90;
-var interval = 1000/fps;
-var lastTime = (new Date()).getTime();
-var currentTime = 0;
-var delta = 0;
+// let canvas = document.createElement('canvas');
+// canvas.id = 'screen';
+// document.body.appendChild(canvas);
+// canvas.width = 2*window.innerWidth;
+// canvas.height = 2*window.innerHeight;
+// canvas.style.width = "100vw";
+// canvas.style.height = "100vh";
+// var screenWidth = canvas.width/2;
+// var screenHeight = canvas.height/2;
+// var ctx = canvas.getContext("2d");
+// ctx.scale(2,2);
+// var fps = 90;
+// var interval = 1000/fps;
+// var lastTime = (new Date()).getTime();
+// var currentTime = 0;
+// var delta = 0;
 
-function mainLoop() {
-    window.requestAnimationFrame(mainLoop);
+// function mainLoop() {
+//     window.requestAnimationFrame(mainLoop);
 
-    currentTime = (new Date()).getTime();
-    delta = (currentTime - lastTime);
+//     currentTime = (new Date()).getTime();
+//     delta = (currentTime - lastTime);
 
-    if (delta > interval) {
-        ctx.fillStyle = "#FCEEB5";
-        ctx.fillRect(0, 0, screenWidth, screenHeight);
-        draw();
-        controlBall();
-        lastTime = currentTime - (delta % interval);
-    }
-}
+//     if (delta > interval) {
+//         ctx.fillStyle = "#FCEEB5";
+//         ctx.fillRect(0, 0, screenWidth, screenHeight);
+//         draw();
+//         controlBall();
+//         lastTime = currentTime - (delta % interval);
+//     }
+// }
 
-function controlBall() {
-    if (randomNumber(1,100) < 2) {
-        ballArray.push(new Ball());            
-    }
-    if (ballArray.length === 40) {
-        for (var i = 0; i < 20; i++) {
-            ballArray.shift();
-        }
-    }    
-}
+// function controlBall() {
+//     if (randomNumber(1,100) < 2) {
+//         ballArray.push(new Ball());            
+//     }
+//     if (ballArray.length === 40) {
+//         for (var i = 0; i < 20; i++) {
+//             ballArray.shift();
+//         }
+//     }    
+// }
 
-function draw() {
-    drawBall();
-}
+// function draw() {
+//     drawBall();
+// }
 
-var ballArray = [];
-var colorArray = ["#EE786E", "#A2CCB6"];
-var gravity = 0.9;
+// var ballArray = [];
+// var colorArray = ["#FF0009", "#2200FF"];
+// var gravity = 0.6;
 
-function drawBall() {
-    for (var i = 0; i < ballArray.length; i++) {
-        var ball = ballArray[i];
-        ctx.fillStyle = ball.color;
-        ctx.beginPath();
-        ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.closePath();
+// function drawBall() {
+//     for (var i = 0; i < ballArray.length; i++) {
+//         var ball = ballArray[i];
+//         ctx.fillStyle = ball.color;
+//         ctx.beginPath();
+//         ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+//         ctx.fill();
+//         ctx.closePath();
         
-        ball.x += ball.xd;
-        if (ball.x + ball.radius > screenWidth || ball.x - ball.radius < 0) {
-            ball.xd *= -1;
-        }
+//         ball.x += ball.xd;
+//         if (ball.x + ball.radius > screenWidth || ball.x - ball.radius < 0) {
+//             ball.xd *= -1;
+//         }
         
-        ball.gravitySpeed += gravity;
-        ball.y += (ball.yd + ball.gravitySpeed);
-        if (ball.y + ball.radius > screenHeight) {
-            if (ball.xd !== 0) {
-                ball.xd *= ball.friction  ;
-            }
-            ball.y = screenHeight - ball.radius;
-            ball.gravitySpeed = -(ball.gravitySpeed * ball.bounce);
-        }
-    }
-}
+//         ball.gravitySpeed += gravity;
+//         ball.y += (ball.yd + ball.gravitySpeed);
+//         if (ball.y + ball.radius > screenHeight) {
+//             if (ball.xd !== 0) {
+//                 ball.xd *= ball.friction  ;
+//             }
+//             ball.y = screenHeight - ball.radius;
+//             ball.gravitySpeed = -(ball.gravitySpeed * ball.bounce);
+//         }
+//     }
+// }
 
-function Ball() {
-    this.radius = randomNumber(5, 20);
-    this.color = colorArray[randomNumber(0, colorArray.length -1)];
-    this.x = randomNumber(this.radius, screenWidth - this.radius);
-    this.y = -this.radius;
-    this.yd = 0;
-    this.xd = randomNumber(-5, 5);
-    this.gravitySpeed = 0;
-    this.bounce = 0.8;
-    this.friction = 0.99;
-    return this;
-}
+// function Ball() {
+//     this.radius = randomNumber(10, 30);
+//     this.color = colorArray[randomNumber(0, colorArray.length -1)];
+//     this.x = randomNumber(this.radius, screenWidth - this.radius);
+//     this.y = -this.radius;
+//     this.yd = 0;
+//     this.xd = randomNumber(-5, 5);
+//     this.gravitySpeed = 0;
+//     this.bounce = 0.8;
+//     this.friction = 0.99;
+//     return this;
+// }
 
-function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-};
+// function randomNumber(min, max) {
+//     return Math.floor(Math.random() * (max - min + 1) + min);
+// };
 
-mainLoop();
+// mainLoop();
