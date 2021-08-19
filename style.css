@@ -1,7 +1,7 @@
 :root {
-  --green: #dbd2a9;
-  --yellow: #f8f8f8;
-  --peach: #d9ca87;
+  --green: #252525;
+  --yellow: #b9b9b9;
+  --peach: #8d8d8d;
 }
 * {
   box-sizing: border-box;
@@ -33,7 +33,7 @@ body {
   height: 100vh;
   top: 0;
   left: 0;
-  background-image: url(./img/bg_minion.jpg);
+  background-image: url(./img/bg_pug.jpg);
   background-size: cover;
   background-position: center;
   z-index: -1000;
@@ -154,13 +154,13 @@ button[type="submit"]:focus:before {
 textarea:focus {
   outline: none; 
   box-shadow: inset 0 0 0 3px currentcolor, inset 3px 3px 0 4px var(--yellow), 3px 3px 0 #f7c49c, 4px 4px 0 #f7c49c;
-  background: #c0ab4f;
+  background: #74736f;
   color: #fff;
 }
 
 .members textarea:focus {
   box-shadow: inset 0 0 0 3px currentcolor, inset 3px 3px 0 4px var(--yellow), 3px 3px 0 #e1e4b6, 4px 4px 0 #e1e4b6;
-  background: #beb349;
+  background: #a4a59b;
   color: #fff;
 }
 
