@@ -1,48 +1,55 @@
+@font-face {
+  font-family: 'SF_HambakSnow';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
-  --green: #252525;
-  --yellow: #b9b9b9;
-  --peach: #8d8d8d;
+  --color1: #e6d5d5;
+  --color2: #7c7c7c;
+  --color3: #ffffff;
 }
 * {
   box-sizing: border-box;
 }
 html {
-  font-family: 'Single Day', cursive;
+  font-family: 'GmarketSansMedium';
   line-height: 1.5;
-  /* background-image: url(../ustudio_team/img/bg.jpg);
-  background-size: cover;
-  background-position: center; */
-  color: var(--peach);
+  color: var(--color3);
   overflow-y: scroll;
   overflow-x: hidden;
   min-height: 100%;
 }
 body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
   min-height: 100vh;
-  /* background-image: url(../ustudio_team/img/bg.jpg);
-  background-size: cover;
-  background-position: center; */
 }
 .bg-area {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   background-image: url(./img/bg_pug.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: repeat-y;
   z-index: -1000;
 }
 
 p {
-  font-family: 'Single Day', cursive;
+  font-family: 'GmarketSansMedium';
   font-weight: 700;
-  margin: 0
+  letter-spacing: -0.6px;
+  /* margin: 0 */
 }
 
 label+p {
@@ -50,35 +57,43 @@ label+p {
 }
 
 h1, h2 {
-  font-weight: 400;
+  font-family: 'SF_HambakSnow';
+  font-weight: 600;
+  letter-spacing: -1.2px;
+  
 }
 h2 {
   margin-bottom: 0;
 }
 h1 {
   text-align: center;
-  font-size: calc(2rem + 4vw);
+  font-size: calc(1rem + 4vw);
   line-height: 1;
-  text-shadow: 1px 1px 0 var(--yellow), 2px 2px 0 var(--yellow), 3px 3px 0 currentColor, 4px 4px 0 currentColor;
+  text-shadow: 1px 1px 0 var(--color2), 2px 2px 0 var(--color2), 3px 3px 0 currentColor, 4px 4px 0 currentColor;
 }
 h1 span {
-  text-shadow: 1px 1px 0 var(--yellow), 2px 2px 0 var(--yellow), 3px 3px 0 currentColor, 4px 4px 0 currentColor;
+  text-shadow: 1px 1px 0 var(--color2), 2px 2px 0 var(--color2), 3px 3px 0 currentColor, 4px 4px 0 currentColor;
 }
 label,
 button,
 textarea {
   font-family: inherit;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 textarea {
   padding: .75rem 1.5rem;
-  background: var(--peach);
-  color: var(--yellow);
+  background: var(--color3);
+  color: var(--color2);
   border: none;
-  border-radius: 10px; 
+  border-radius: 20px;
   width: 100%;
+  height: 70px;
   position: relative;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 
 .generator{
@@ -90,10 +105,10 @@ textarea {
 h1 span,
 .members,
 button {
-  color: var(--green);
+  color: var(--color1);
 }
 .members textarea {
-  background: var(--green);
+  background: var(--color1);
 }
 
 form {
@@ -131,7 +146,7 @@ button[type="submit"]:before {
   right: 0;
   top: 0;
   bottom: 0;
-  background: var(--green);
+  background: var(--color1);
   opacity: .3;
   z-index: -1;
   transform: translate3d(6px, 6px, 0);
@@ -143,7 +158,7 @@ button:focus {
 }
 button[type="submit"]:hover,
 button[type="submit"]:focus {
-  color: var(--yellow); 
+  color: var(--color2); 
 }
 button[type="submit"]:hover:before,
 button[type="submit"]:focus:before {
@@ -153,13 +168,13 @@ button[type="submit"]:focus:before {
 
 textarea:focus {
   outline: none; 
-  box-shadow: inset 0 0 0 3px currentcolor, inset 3px 3px 0 4px var(--yellow), 3px 3px 0 #f7c49c, 4px 4px 0 #f7c49c;
+  box-shadow: inset 0 0 0 3px currentcolor, inset 3px 3px 0 4px var(--color2), 3px 3px 0 #f7c49c, 4px 4px 0 #f7c49c;
   background: #74736f;
   color: #fff;
 }
 
 .members textarea:focus {
-  box-shadow: inset 0 0 0 3px currentcolor, inset 3px 3px 0 4px var(--yellow), 3px 3px 0 #e1e4b6, 4px 4px 0 #e1e4b6;
+  box-shadow: inset 0 0 0 3px currentcolor, inset 3px 3px 0 4px var(--color2), 3px 3px 0 #e1e4b6, 4px 4px 0 #e1e4b6;
   background: #a4a59b;
   color: #fff;
 }
@@ -171,11 +186,11 @@ textarea:focus {
 }
 .finalteams:not(:empty) {
   margin: 2rem auto;
-  background: var(--yellow);
+  background: var(--color2);
   border-radius: 10px;
   padding: 2rem;
-  border: 3px solid var(--peach);
-  box-shadow: 1px 1px 0 var(--peach), 2px 2px 0 var(--peach), 3px 3px 0 var(--peach);
+  border: 3px solid var(--color3);
+  box-shadow: 1px 1px 0 var(--color3), 2px 2px 0 var(--color3), 3px 3px 0 var(--color3);
 }
 
 section:first-of-type h2 {
@@ -196,8 +211,8 @@ canvas {
 }
 .copy {
   border: none;
-  background: var(--peach);
-  color: var(--yellow);
+  background: var(--color3);
+  color: var(--color2);
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -207,7 +222,7 @@ canvas {
 }
 .copy:hover,
 .copy:focus {
-  color: var(--peach);
+  color: var(--color3);
   box-shadow: 0 0 0 3px;
   background: transparent;
 }
@@ -215,4 +230,33 @@ canvas {
 .finalteams:not(:empty) + .copy  {
   visibility: visible;
   opacity: 1;
+}
+
+#team-dropdown {
+  width: 150px;
+  color: #000;
+  font-family: 'GmarketSansMedium';
+}
+#team-dropdown option {
+  font-family: 'GmarketSansMedium';
+}
+.checksection {
+  height: 150px;
+  margin: 20px auto;
+  font-size: 1.1rem;
+  background-color: rgba(27, 26, 26, 0.5);
+  border-radius: 20px;
+  padding: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+#checkAll {
+  font-size: 1rem;
+  background-color: var(--color1);
+  border: none;
+  padding: 10px;
+  color: #000;
+  margin-bottom: 10px;
 }

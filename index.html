@@ -1,41 +1,133 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>UStudio_Random_Team</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Coiny|Thasadith:700" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="./style.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>UStudio_Random_Team</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Coiny|Thasadith:700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="bg-area"></div>
+    <div class="generator">
+      <h1><span>유스튜디오</span> 랜덤 팀</h1>
+      <form id="form">
+        <div>
+          <label class="method-label method-2" for="teams-labels"
+            >팀</label
+          >
+          <div class="checksection check-teams">
+            <select name="team-dropdown" id="team-dropdown">
+              <option value="none" selected disabled hidden>
+                === 선택 ===
+              </option>
+              <option value="밥팀1">1개 팀</option>
+              <option value="밥팀1, 밥팀2">2개 팀</option>
+              <option value="밥팀1, 밥팀2, 밥팀3">3개 팀</option>
+              <option value="밥팀1, 밥팀2, 밥팀3, 밥팀4">4개 팀</option>
+              <option value="밥팀1, 밥팀2, 밥팀3, 밥팀4, 밥팀5">5개 팀</option>
+            </select>
+          </div>
+          <textarea
+            id="teams-labels"
+            cols="20"
+            rows="2"
+            name="teams-labels"
+            autofocus
+          >
+오늘은 몇팀일까요?</textarea
+          >
+        </div>
+        <div class="members">
+          <label for="teams-members">멤버</label>
+          <div class="checksection check-members">
+            <input type="checkbox" name="members" id="members" value="양승철" />
+            양승철
+            <input type="checkbox" name="members" id="members" value="양승영" />
+            양승영
+            <input type="checkbox" name="members" id="members" value="이철희" />
+            이철희
+            <input type="checkbox" name="members" id="members" value="남궁아사달" />
+            남궁아사달
+            <input type="checkbox" name="members" id="members" value="문지천" />
+            문지천<br />
+            <input type="checkbox" name="members" id="members" value="심현희" />
+            심현희
+            <input type="checkbox" name="members" id="members" value="문관우" />
+            문관우
+            <input type="checkbox" name="members" id="members" value="이명현" />
+            이명현
+            <input type="checkbox" name="members" id="members" value="김수정" />
+            김수정
+            <input type="checkbox" name="members" id="members" value="김현민" />
+            김현민<br />
+            <input type="checkbox" name="members" id="members" value="최누리" />
+            최누리
+            <input type="checkbox" name="members" id="members" value="김태석" />
+            김태석
+            <input type="checkbox" name="members" id="members" value="하준호" />
+            하준호
+            <input type="checkbox" name="members" id="members" value="박인애" />
+            박인애
+          </div>
 
-</head>
-<body>
-<div class="bg-area">
-</div>
-<div class="generator">
-  <h1>
-    <span>유스튜디오</span> 랜덤 팀
-  </h1>
-  <form id="form">
-    <div>
-      <label class="method-label method-2" for="teams-labels">팀 이름</label>
-      <p>',' 를 찍거나 'Enter' 로 구분하세요</p>
-      <textarea id="teams-labels" cols="20" rows="2" name="teams-labels" autofocus>
-밥팀1, 밥팀2, 밥팀3, 밥팀4</textarea>            
+          <textarea
+            id="teams-members"
+            cols="20"
+            rows="5"
+            name="teams-members"
+          ></textarea>
+        </div>
+        <button type="submit" id="submit" class="submit">팀 짜기</button>
+      </form>
+      <div class="results" id="results">
+        <div class="finalteams" id="finalteams"></div>
+        <button class="copy" type="button" id="copy">복사</button>
+      </div>
     </div>
-    <div class="members">
-      <label for="teams-members">멤버 이름</label>
-      <p>',' 를 찍거나 'Enter' 로 구분하세요</p>
-      <textarea id="teams-members" cols="20" rows="5" name="teams-members">양승철, 양승영, 이철희, 남궁아사달, 문지천, 이명현, 심현희, 문관우, 김수정, 김현민, 최누리, 김태석, 하준호</textarea>
-    </div>
-    <button type="submit" id="submit" class="submit">팀 짜기</button>
-  </form>
-  <div class="results" id="results">
-    <div class="finalteams" id="finalteams"></div>
-    <button class="copy" type="button" id="copy">복사</button>
-  </div>
-</div>
-  <script  src="./script.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+    <script>
+      $(document).ready(function () {
+        function getTeams() {
+          $("select[name=team-dropdown]").change(function () {
+            console.log($(this).val()); //value값 가져오기
+            $("#teams-labels").text($(this).val());
+          });
+        }
+        getTeams();
 
-</body>
+        function checkNames() {
+          var checkNameArr = [];
+          $("input[name=members]:checked").each(function () {
+            checkNameArr.push($(this).val());
+          });
+
+          $("#teams-members").text(checkNameArr);
+        }
+
+        $("input[name=members]").on("change", function () {
+          checkNames();
+        });
+        // $("input[name=allButton]").on("change", function() {
+
+        // })
+      });
+    </script>
+  </body>
 </html>
