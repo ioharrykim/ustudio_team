@@ -15,6 +15,7 @@
   --color1: #e4e6d5;
   --color2: #7c7c7c;
   --color3: #ffffff;
+  background-color: rgba(255,255,255,0.1);
 }
 * {
   box-sizing: border-box;
