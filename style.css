@@ -1,12 +1,14 @@
 @font-face {
-  font-family: 'SF_HambakSnow';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff') format('woff');
+  font-family: "SF_HambakSnow";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'GmarketSansMedium';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -15,13 +17,13 @@
   --color1: #e4e6d5;
   --color2: #7c7c7c;
   --color3: #ffffff;
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 * {
   box-sizing: border-box;
 }
 html {
-  font-family: 'GmarketSansMedium';
+  font-family: "GmarketSansMedium";
   line-height: 1.5;
   color: var(--color3);
   overflow-y: scroll;
@@ -39,7 +41,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background-image: url(./img/bg_pug.jpg);
+  background-image: url(./img/bg_ustudio.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: repeat-y;
@@ -47,21 +49,21 @@ body {
 }
 
 p {
-  font-family: 'GmarketSansMedium';
+  font-family: "GmarketSansMedium";
   font-weight: 700;
   letter-spacing: -0.6px;
   /* margin: 0 */
 }
 
-label+p {
-  margin: -0.5rem 0 .5rem;
+label + p {
+  margin: -0.5rem 0 0.5rem;
 }
 
-h1, h2 {
-  font-family: 'SF_HambakSnow';
+h1,
+h2 {
+  font-family: "SF_HambakSnow";
   font-weight: 600;
   letter-spacing: -1.2px;
-  
 }
 h2 {
   margin-bottom: 0;
@@ -70,10 +72,12 @@ h1 {
   text-align: center;
   font-size: calc(1rem + 4vw);
   line-height: 1;
-  text-shadow: 1px 1px 0 var(--color2), 2px 2px 0 var(--color2), 3px 3px 0 currentColor, 4px 4px 0 currentColor;
+  text-shadow: 1px 1px 0 var(--color2), 2px 2px 0 var(--color2),
+    3px 3px 0 currentColor, 4px 4px 0 currentColor;
 }
 h1 span {
-  text-shadow: 1px 1px 0 var(--color2), 2px 2px 0 var(--color2), 3px 3px 0 currentColor, 4px 4px 0 currentColor;
+  text-shadow: 1px 1px 0 var(--color2), 2px 2px 0 var(--color2),
+    3px 3px 0 currentColor, 4px 4px 0 currentColor;
 }
 label,
 button,
@@ -83,7 +87,7 @@ textarea {
 }
 
 textarea {
-  padding: .75rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   background: var(--color3);
   color: var(--color2);
   border: none;
@@ -97,7 +101,7 @@ textarea {
   -o-border-radius: 20px;
 }
 
-.generator{
+.generator {
   margin: 0 auto;
   width: 90%;
   max-width: 960px;
@@ -122,8 +126,8 @@ form > div {
 }
 @media screen and (min-width: 960px) {
   form > div {
-    flex: 1 0 calc(50% - .5rem);
-    max-width: calc(50% - .5rem);
+    flex: 1 0 calc(50% - 0.5rem);
+    max-width: calc(50% - 0.5rem);
   }
 }
 
@@ -148,7 +152,7 @@ button[type="submit"]:before {
   top: 0;
   bottom: 0;
   background: var(--color1);
-  opacity: .3;
+  opacity: 0.3;
   z-index: -1;
   transform: translate3d(6px, 6px, 0);
   border-radius: 7px;
@@ -159,23 +163,25 @@ button:focus {
 }
 button[type="submit"]:hover,
 button[type="submit"]:focus {
-  color: var(--color2); 
+  color: var(--color2);
 }
 button[type="submit"]:hover:before,
 button[type="submit"]:focus:before {
   opacity: 1;
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
 }
 
 textarea:focus {
-  outline: none; 
-  box-shadow: inset 0 0 0 3px currentcolor, inset 3px 3px 0 4px var(--color2), 3px 3px 0 #f7c49c, 4px 4px 0 #f7c49c;
+  outline: none;
+  box-shadow: inset 0 0 0 3px currentcolor, inset 3px 3px 0 4px var(--color2),
+    3px 3px 0 #f7c49c, 4px 4px 0 #f7c49c;
   background: #74736f;
   color: #fff;
 }
 
 .members textarea:focus {
-  box-shadow: inset 0 0 0 3px currentcolor, inset 3px 3px 0 4px var(--color2), 3px 3px 0 #e1e4b6, 4px 4px 0 #e1e4b6;
+  box-shadow: inset 0 0 0 3px currentcolor, inset 3px 3px 0 4px var(--color2),
+    3px 3px 0 #e1e4b6, 4px 4px 0 #e1e4b6;
   background: #a4a59b;
   color: #fff;
 }
@@ -183,7 +189,7 @@ textarea:focus {
 .finalteams {
   visibility: hidden;
   opacity: 0;
-  transition: opacity ease-in .5s;
+  transition: opacity ease-in 0.5s;
 }
 .finalteams:not(:empty) {
   margin: 2rem auto;
@@ -191,7 +197,8 @@ textarea:focus {
   border-radius: 10px;
   padding: 2rem;
   border: 3px solid var(--color3);
-  box-shadow: 1px 1px 0 var(--color3), 2px 2px 0 var(--color3), 3px 3px 0 var(--color3);
+  box-shadow: 1px 1px 0 var(--color3), 2px 2px 0 var(--color3),
+    3px 3px 0 var(--color3);
 }
 
 section:first-of-type h2 {
@@ -219,7 +226,7 @@ canvas {
   right: 1rem;
   visibility: hidden;
   opacity: 0;
-  transition: .5s .5s;
+  transition: 0.5s 0.5s;
 }
 .copy:hover,
 .copy:focus {
@@ -228,7 +235,7 @@ canvas {
   background: transparent;
 }
 .finalteams:not(:empty),
-.finalteams:not(:empty) + .copy  {
+.finalteams:not(:empty) + .copy {
   visibility: visible;
   opacity: 1;
 }
@@ -236,10 +243,10 @@ canvas {
 #team-dropdown {
   width: 150px;
   color: #000;
-  font-family: 'GmarketSansMedium';
+  font-family: "GmarketSansMedium";
 }
 #team-dropdown option {
-  font-family: 'GmarketSansMedium';
+  font-family: "GmarketSansMedium";
 }
 .checksection {
   height: 150px;
